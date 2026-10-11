@@ -1,0 +1,489 @@
+/* Color palette and font variables */
+:root {
+  --color-cream: #FAF5EE;
+  --color-espresso: #4A2C18;
+  --color-cinnamon: #9E3E18;
+  --color-charcoal: #231A14;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: Verdana, Tahoma, sans-serif;
+}
+
+/* Base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* Responsive Media */
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+audio {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 0.5rem;
+}
+
+/* Typography & Visual Hierarchy */
+h1,
+h2,
+h3,
+legend {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-cream);
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-espresso);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--color-cinnamon);
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-espresso);
+  margin-bottom: 0.5rem;
+}
+
+p,
+ul,
+address {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--color-cinnamon);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-espresso);
+  outline: 2px solid var(--color-cinnamon);
+  outline-offset: 2px;
+}
+
+/* Header & Mobile-First Flexbox Navigation */
+.site-header {
+  background-color: var(--color-espresso);
+  color: var(--color-cream);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  border-bottom: 4px solid var(--color-cinnamon);
+}
+
+.site-logo {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  background-color: var(--color-cream);
+  padding: 0.35rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-cinnamon);
+}
+
+.site-tagline {
+  max-width: 42rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-cream);
+}
+
+.site-nav {
+  width: 100%;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.nav-list a {
+  display: block;
+  padding: 0.65rem 1.1rem;
+  color: var(--color-cream);
+  background-color: var(--color-espresso);
+  border: 2px solid var(--color-cream);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible,
+.nav-list a[aria-current="page"] {
+  background-color: var(--color-cinnamon);
+  color: var(--color-cream);
+  border-color: var(--color-cream);
+}
+
+/* Main Content Container & Sections */
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.content-section {
+  background-color: var(--color-cream);
+  border: 2px solid var(--color-espresso);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.feature-callout {
+  border-left: 6px solid var(--color-cinnamon);
+}
+
+/* Mobile-First Flexbox Layouts for Sections & Cards */
+.feature-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.feature-media {
+  flex: 1 1 auto;
+}
+
+.feature-media img,
+.feature-media video {
+  border: 2px solid var(--color-espresso);
+}
+
+.feature-text {
+  flex: 1 1 auto;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: var(--color-cream);
+  border: 2px solid var(--color-espresso);
+  border-top: 5px solid var(--color-cinnamon);
+  border-radius: 6px;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Figure & Figcaption Styling */
+.product-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-figure img {
+  border: 2px solid var(--color-espresso);
+}
+
+.product-figure figcaption {
+  font-size: 0.95rem;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--color-cinnamon);
+  color: var(--color-charcoal);
+}
+
+/* Contact Page Layout & Form Controls */
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hours-list,
+.sourcing-list {
+  padding-left: 1.25rem;
+}
+
+.hours-list li,
+.sourcing-list li {
+  margin-bottom: 0.55rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+fieldset {
+  border: 2px solid var(--color-espresso);
+  border-radius: 6px;
+  padding: 1.15rem;
+  margin: 0;
+}
+
+legend {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-espresso);
+  padding: 0 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  font-weight: 700;
+  color: var(--color-espresso);
+  font-size: 0.95rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+  background-color: var(--color-cream);
+  border: 2px solid var(--color-espresso);
+  border-radius: 4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--color-cinnamon);
+  outline-offset: 1px;
+  border-color: var(--color-cinnamon);
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+button {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.75rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-cinnamon);
+  color: var(--color-cream);
+  border: 2px solid var(--color-espresso);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--color-espresso);
+  color: var(--color-cream);
+}
+
+.btn-secondary {
+  background-color: var(--color-cream);
+  color: var(--color-espresso);
+  border: 2px solid var(--color-espresso);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background-color: var(--color-espresso);
+  color: var(--color-cream);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-espresso);
+  color: var(--color-cream);
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+  margin-top: 2rem;
+  border-top: 4px solid var(--color-cinnamon);
+}
+
+.site-footer p {
+  margin-bottom: 0.4rem;
+}
+
+.site-footer a {
+  color: var(--color-cream);
+  text-decoration: underline;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: var(--color-cream);
+  background-color: var(--color-cinnamon);
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+}
+
+/* Tablet and desktop layout */
+@media (min-width: 768px) {
+  .site-header {
+    padding: 1.75rem 2rem;
+  }
+
+  h1 {
+    font-size: 2.15rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    width: auto;
+  }
+
+  main {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .content-section {
+    padding: 1.75rem;
+  }
+
+  .feature-layout,
+  .product-figure {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .feature-media,
+  .product-figure img {
+    flex: 1 1 46%;
+    max-width: 48%;
+  }
+
+  .feature-text,
+  .product-figure figcaption {
+    flex: 1 1 50%;
+  }
+
+  .card-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+
+  .card {
+    flex: 1 1 calc(33.333% - 1.25rem);
+  }
+
+  .contact-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.75rem;
+  }
+
+  .location-panel {
+    flex: 1 1 36%;
+  }
+
+  .form-panel {
+    flex: 1 1 60%;
+  }
+
+  .form-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.35rem;
+  }
+
+  .card-grid {
+    gap: 1.5rem;
+  }
+
+  .card {
+    flex: 1 1 calc(33.333% - 1.5rem);
+  }
+}

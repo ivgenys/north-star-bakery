@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Pre-Orders | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <img class="site-logo" src="bakery-logo_c.png" alt="North Star Bakery emblem with a rising star above a golden wheat sheaf" width="120" height="120">
+    <h1>Contact North Star Bakery &amp; Request a Pre-Order</h1>
+    <p class="site-tagline">Reserve daily sourdough loaves, commuter pastry boxes, or custom celebration cakes for Oak Street counter pickup.</p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products &amp; Menu</a></li>
+        <li><a href="about.html">About Our Bakery</a></li>
+        <li><a href="contact.html" aria-current="page">Contact &amp; Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contact-layout">
+      <section class="content-section location-panel" aria-labelledby="location-hours-heading">
+        <h2 id="location-hours-heading">Bakery Location &amp; Hours of Operation</h2>
+        <address>
+          <strong>North Star Bakery</strong><br>
+          418 North Oak Street, Minneapolis, MN 55414 (two blocks north of the Oak Street transit stop)<br>
+          Phone: <a href="tel:+16125550148">(612) 555-0148</a><br>
+          Email: <a href="mailto:hello@northstarbakery.example.com">hello@northstarbakery.example.com</a>
+        </address>
+        <h3>Counter &amp; Pre-Order Pickup Hours</h3>
+        <ul class="hours-list">
+          <li><strong>Tuesday through Friday:</strong> 6:30 AM to 4:00 PM</li>
+          <li><strong>Saturday and Sunday:</strong> 7:00 AM to 3:00 PM</li>
+          <li><strong>Monday:</strong> Closed (online inquiries answered within one business day)</li>
+        </ul>
+      </section>
+
+      <section class="content-section form-panel" aria-labelledby="preorder-form-heading">
+        <h2 id="preorder-form-heading">Inquiry &amp; Pre-Order Request Form</h2>
+        <p>Because we confirm every order personally and take payment at pickup, please fill out the form below to reserve daily loaves, order a celebration cake, or ask about ingredients.</p>
+
+        <form action="contact.html" method="get">
+          <fieldset>
+            <legend>Customer Contact Information</legend>
+            <div class="form-group">
+              <label for="customer-name">Full Name (required):</label>
+              <input type="text" id="customer-name" name="customer_name" required minlength="2" maxlength="80" autocomplete="name" placeholder="Jordan Alvarez">
+            </div>
+            <div class="form-group">
+              <label for="customer-email">Email Address (required):</label>
+              <input type="email" id="customer-email" name="customer_email" required autocomplete="email" placeholder="jordan@example.com">
+            </div>
+            <div class="form-group">
+              <label for="customer-phone">Phone Number (format 123-456-7890, required):</label>
+              <input type="tel" id="customer-phone" name="customer_phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Enter a 10-digit phone number as 123-456-7890" autocomplete="tel" placeholder="612-555-0192">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Pre-Order &amp; Inquiry Specifications</legend>
+            <div class="form-group">
+              <label for="pickup-date">Requested Pickup Date (required):</label>
+              <input type="date" id="pickup-date" name="pickup_date" required min="2026-10-12">
+            </div>
+            <div class="form-group">
+              <label for="request-type">Request Type (required):</label>
+              <select id="request-type" name="request_type" required>
+                <option value="">-- Select a request type --</option>
+                <option value="pre-order">Bread or Pastry Pre-Order</option>
+                <option value="custom-cake">Custom Celebration Cake Order</option>
+                <option value="event-catering">Event or Office Catering Platter</option>
+                <option value="general-question">General Bakery Question</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="item-details">Item Details, Quantities &amp; Questions (required):</label>
+              <textarea id="item-details" name="item_details" rows="4" cols="50" required minlength="5" maxlength="500" placeholder="List loaf names, pastry box counts, cake size and flavor, or your question..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="allergy-notes">Allergy Notes or Dietary Restrictions (if applicable):</label>
+              <textarea id="allergy-notes" name="allergy_notes" rows="3" cols="50" maxlength="300" placeholder="Optional: note wheat, tree nut, peanut, dairy, egg, or sesame allergies..."></textarea>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="btn-primary" type="submit">Submit Request</button>
+            <button class="btn-secondary" type="reset">Reset Form</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 North Star Bakery. 418 North Oak Street, Minneapolis, MN 55414.</p>
+    <p>Return to <a href="index.html">Home</a> or browse our <a href="products.html">Products &amp; Menu</a>.</p>
+  </footer>
+</body>
+</html>
